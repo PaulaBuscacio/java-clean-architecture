@@ -4,12 +4,13 @@ import br.com.alura.codechella.domain.Address;
 
 import java.time.LocalDate;
 
-public class UserFactory {
+//builder pattern
+public class UserBuilder {
 
     private User user;
 
-    public User createUserWithNameCpfAndBirthday(String name, String cpf, LocalDate birthday) {
-        this.user = new User(name, cpf, birthday, "");
+    public User createUserWithNameCpfBirthdayAndEmail(String name, String cpf, LocalDate birthday, String email) {
+        this.user = new User(cpf,name, birthday, email);
         return this.user;
     }
 
